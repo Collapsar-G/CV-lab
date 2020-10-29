@@ -32,7 +32,7 @@ def Gaussion(img_input, sigma):
 
     k2 /= k2.sum()
     print(k2)
-    # # 构造一维卷积核
+    # ## 构造一维卷积核
     # k1 = np.zeros(k_size, dtype=np.float)
     # for x in range(0, k_size):
     #     k1[x] = np.exp((-x ** 2) / (2 * (sigma ** 2)))
