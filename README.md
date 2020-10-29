@@ -10,7 +10,7 @@
 >2.利用常见的图像文件格式（.jpg； .png； .bmp； .gif）进行测试。
 >
 #### 实验结果：
-![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201023105754.png)
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201029102431.png)
 
 
 
@@ -24,4 +24,22 @@
 >3.用alpha混合，为a.png替换一张新的背景（bg.png）。
 
 #### 实验结果
-![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201023105512.png)
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201029102114.png)
+
+## lab2 图像滤波处理
+### lab2_1: 实现图像的高斯滤波处理
+
+> **实验要求**
+>
+>通过调整高斯函数的标准差(sigma)来控制平滑程度；
+>
+>>给定函数：void Gaussian(const MyImage &input, MyImage &output, double sigma);
+>
+>2）滤波窗口大小取为[6*sigma-1]/2*2+1，[.]表示取整；
+>
+>3）利用二维高斯函数的行列可分离性进行加速；
+>>* 先对每行进行一维高斯滤波，再对结果的每列进行同样的一维高斯滤波；
+>>* 空间滤波=图像卷积；
+>>* 高斯滤波=以高斯函数为卷积核的图像卷积。
+
+#### 实验结果
