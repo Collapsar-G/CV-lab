@@ -1,16 +1,23 @@
+import datetime
+
 import cv2.cv2 as cv2
 import numpy as np
 
 
+# import cupy as np
+
+
 # Gaussian filter
+# @jit
 def gaussion(img_input, sigma):
+    starttime = datetime.datetime.now()
     k_size = int(round(6 * sigma - 1) / 2 * 2 + 1)  # 预设卷积核大小
 
     # 图像数据读取、调整
     if len(img_input.shape) == 3:
         H, W, C = img_input.shape
     else:
-        img = np.expend_dims(img_input, axis=-1)
+        img = np.expand_dims(img_input, axis=-1)
         H, W, C = img.shape
 
     # 对图像进行 zreo padding
@@ -18,6 +25,7 @@ def gaussion(img_input, sigma):
     img_output = np.zeros((H + pad_size * 2, W + pad_size * 2, C), dtype=np.float)
     img_output[pad_size: pad_size + H, pad_size: pad_size + W] = img_input.copy().astype(np.float)
     tmp = img_output.copy()
+
     #############################
     # 构造卷积核
     # # 构造二维卷积核
@@ -45,7 +53,6 @@ def gaussion(img_input, sigma):
     k1 /= (2 * np.pi * sigma * sigma)
 
     k1 /= k1.sum()
-    print(k1)
 
     ##############################################################
 
@@ -66,17 +73,19 @@ def gaussion(img_input, sigma):
     # 输出图像预处理
     img_output = img_output[pad_size: pad_size + H, pad_size: pad_size + W].astype(np.uint8)
     np.clip(img_output, 0, 255)
-
+    endtime = datetime.datetime.now()
+    print("高斯滤波时间：", endtime - starttime)
     return img_output
 
 
-# 读取并展示图片
-img_path = r'./image/2-1/a.jpg'
-img = cv2.imread(img_path)
-cv2.imshow('image of salt and pepper noise', img)
-cv2.waitKey(0)
-ans_img = gaussion(img_input=img, sigma=3)
-cv2.imshow('image without salt and pepper noise', ans_img)
-cv2.waitKey(0)
-# 关闭窗口
-cv2.destroyAllWindows()
+if __name__ == "__main__":
+    # 读取并展示图片
+    img_path = r'./image/2-1/a.jpg'
+    img = cv2.imread(img_path)
+    cv2.imshow('image of salt and pepper noise', img)
+    cv2.waitKey(0)
+    ans_img = gaussion(img_input=img, sigma=1)
+    cv2.imshow('image without salt and pepper noise', ans_img)
+    cv2.waitKey(0)
+    # 关闭窗口
+    cv2.destroyAllWindows()

@@ -43,3 +43,12 @@
 >>* 高斯滤波=以高斯函数为卷积核的图像卷积。
 
 #### 实验结果
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201030162332.png)
+
+### lab2_2: 实现图像的联合双边滤波
+
+#### 实验要求
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201030162655.png)
+
+#### 实验结果
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201103204532.png)
