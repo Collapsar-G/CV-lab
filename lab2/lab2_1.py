@@ -80,7 +80,7 @@ def gaussion(img_input, sigma):
 
 
 if __name__ == "__main__":
-    # 读取并展示图片
+    # 读取并展示图片;
     img_path = r'./image/2-1/a.jpg'
     img = cv2.imread(img_path)
     cv2.imshow('image of salt and pepper noise', img)
