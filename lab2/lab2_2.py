@@ -124,7 +124,7 @@ if __name__ == "__main__":
     cv2.imshow('up_sampling', img_up_sampled)
     cv2.waitKey(0)
     # 对图像进行联合滤波处理
-    img_jbf = jbf(img, img_up_sampled, 11, 2, 15)
+    img_jbf = jbf(img, img_up_sampled, 21, 10, 10)
     cv2.imshow('img_jbg', img_jbf)
     cv2.waitKey(0)
     # 关闭窗口

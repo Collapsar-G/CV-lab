@@ -2,16 +2,17 @@ import datetime
 
 import cv2.cv2 as cv2
 import numpy as np
+from numba import jit
 
 
 # import cupy as np
 
 
 # Gaussian filter
-# @jit
+@jit
 def gaussion(img_input, sigma):
     starttime = datetime.datetime.now()
-    k_size = int(round(6 * sigma - 1) / 2 * 2 + 1)  # 预设卷积核大小
+    k_size = int(round(6 * sigma - 1) // 2 * 2 + 1)  # 预设卷积核大小
 
     # 图像数据读取、调整
     if len(img_input.shape) == 3:
@@ -27,16 +28,16 @@ def gaussion(img_input, sigma):
     tmp = img_output.copy()
 
     #############################
-    # 构造卷积核
+    # # 构造卷积核
     # # 构造二维卷积核
     # k2 = np.zeros((k_size, k_size), dtype=np.float)
     # for x in range(0, k_size):
     #     for y in range(0, k_size):
-    #         k2[y, x] = np.exp(-(x ** 2 + y ** 2) / (2 * (sigma ** 2)))
+    #         k2[y, x] = np.exp(-((x-k_size//2) ** 2 + (y-k_size//2) ** 2) / (2 * (sigma ** 2)))
     # k2 /= (2 * np.pi * sigma * sigma)
     # #归一化
     # k2 /= k2.sum()
-    # print(k2)
+    # #print(k2)
     #
     # # 二维卷积操作
     # for h in range(H):
@@ -48,12 +49,12 @@ def gaussion(img_input, sigma):
     ## 构造一维卷积核
     k1 = np.zeros(k_size, dtype=np.float)
     for x in range(0, k_size):
-        k1[x] = np.exp((-x ** 2) / (2 * (sigma ** 2)))
+        k1[x] = np.exp((-(x - k_size // 2) ** 2) / (2 * (sigma ** 2)))
 
-    k1 /= (2 * np.pi * sigma * sigma)
+    k1 /= np.sqrt(2 * np.pi * sigma * sigma)
 
     k1 /= k1.sum()
-
+    print(k1)
     ##############################################################
 
     # 一维卷积操作
