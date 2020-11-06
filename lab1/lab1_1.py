@@ -14,7 +14,7 @@ for i in range(0, 3):
     image = cv2.imread(img_path_1 + img_name_1[i], 1)
     img.insert(i, image)
     cv2.imshow(img_name_1[i], img[i])
-    cv2.waitKey(0)
+
 
 # 由于图片所在的目录不在当前目录，因此我们需要告诉Pyglet去哪里找到它们：
 pyglet.resource.path = ['./image/lab1/']
@@ -40,6 +40,6 @@ def on_draw():
 
 
 pyglet.app.run()
-
+cv2.waitKey(0)
 # 关闭窗口
 cv2.destroyAllWindows()
