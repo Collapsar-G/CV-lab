@@ -10,7 +10,7 @@ warnings.filterwarnings('ignore')
 
 @jit
 def Deformation(image_input):
-    ## 读取图像的长宽通道数
+    # 读取图像的长宽通道数
     if len(image_input.shape) == 3:
         H, W, C = image_input.shape
     else:
@@ -23,7 +23,7 @@ def Deformation(image_input):
     dst_img = np.zeros(shape=dst_shape, dtype=np.uint8)
     dst_h, dst_w, dst_c = dst_shape
 
-    ## 遍历图像
+    # 遍历图像
     for i in range(H):
         for j in range(W):
             # 中心坐标归一化
@@ -32,8 +32,8 @@ def Deformation(image_input):
             r = np.sqrt(temp_x ** 2 + temp_y ** 2)
             th = (1 - r) ** 2
             if r < 1:
-                x = np.cos(th) * temp_x - np.sin(th) * temp_y
-                y = np.sin(th) * temp_x + np.cos(th) * temp_y
+                y = np.cos(th) * temp_y - np.sin(th) * temp_x
+                x = np.sin(th) * temp_y + np.cos(th) * temp_x
             else:
                 x = temp_x
                 y = temp_y
@@ -51,10 +51,10 @@ if __name__ == "__main__":
     img = cv2.imread(img_path)
     cv2.imshow('org_img', img)
 
-    # 向下采样并展示图像
+    # 采样并展示图像
     start_time = time()
     img_sub_sampled = Deformation(img)
-    cv2.imshow('sub_sampled', img_sub_sampled)
+    cv2.imshow('sampled', img_sub_sampled)
     end_time = time()
     print("图像变形用时：", end_time - start_time)
 
