@@ -31,7 +31,6 @@ def compute_e(img_left, img_right, dmax, size):
                             if (j + d + N) >= W:
                                 break
                             else:
-
                                 for k in range(3):
                                     square_diff = (img_left[x, y + d, k] - img_right[x, y, k]) ** 2
                                     sum += square_diff
