@@ -1,8 +1,11 @@
 # CV-lab
+
 > SDU软件计算机视觉实验报告
 
 ## lab1 图像加载、显示
+
 ### lab 1-1：图像显示
+
 > **实验要求** 
 >
 >1.利用图像库的功能，实现从文件加载图像，并在窗口中进行显示的功能；
@@ -14,7 +17,10 @@
 
 
 
+
+
 ### lab 1-2：图像合成
+
 > **实验要求：**
 >
 >1.现有一张4通道透明图像a.png:
@@ -27,6 +33,7 @@
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201029102114.png)
 
 ## lab2 图像滤波处理
+
 ### lab2_1: 实现图像的高斯滤波处理
 
 > **实验要求**
@@ -43,14 +50,17 @@
 >>* 高斯滤波=以高斯函数为卷积核的图像卷积。
 
 #### 实验结果
+
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201030162332.png)
 
 ### lab2_2: 实现图像的联合双边滤波
 
 #### 实验要求
+
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201030162655.png)
 
 #### 实验结果
+
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201106172339.png)
 
 ## lab3 图像变换与变形
@@ -58,25 +68,36 @@
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125172730.png)
 
 #### 实验结果
+
 > lab3_1:
+
+
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125173217.png)
 
 > lab3_2:
+
+
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125173843.png)
->
+
 
 ## lab4 人脸面部识别
+
 #### 实验要求
+
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125182641.png)
 
 #### 实验结果
+
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125190415.png)
 
 ## lab5 双目视觉
+
 #### 实验要求
+
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125190734.png)
 
 #### 实验结果
+
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125191112.png)
 
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125191147.png)
