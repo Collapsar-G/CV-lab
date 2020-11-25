@@ -1,7 +1,7 @@
 import warnings
 from time import time
 
-import cv2.cv2 as cv2
+import cv2
 import numpy as np
 from numba import jit
 

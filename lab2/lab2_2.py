@@ -2,7 +2,7 @@ import warnings
 from time import time
 
 import numpy as np
-from cv2 import cv2
+from cv2
 from numba import jit
 
 warnings.filterwarnings('ignore')

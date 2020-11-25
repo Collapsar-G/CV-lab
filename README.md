@@ -10,7 +10,7 @@
 >2.利用常见的图像文件格式（.jpg； .png； .bmp； .gif）进行测试。
 >
 #### 实验结果：
-![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201029102431.png)
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125173547.png)
 
 
 
@@ -52,3 +52,31 @@
 
 #### 实验结果
 ![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201106172339.png)
+
+## lab3 图像变换与变形
+
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125172730.png)
+
+#### 实验结果
+> lab3_1:
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125173217.png)
+
+> lab3_2:
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125173843.png)
+>
+
+## lab4 人脸面部识别
+#### 实验要求
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125182641.png)
+
+#### 实验结果
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125190415.png)
+
+## lab5 双目视觉
+#### 实验要求
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125190734.png)
+
+#### 实验结果
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125191112.png)
+
+![](https://cdn.jsdelivr.net/gh/Collapsar-G/image/img/20201125191147.png)

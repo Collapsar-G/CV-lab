@@ -1,7 +1,7 @@
 import warnings
 from time import time
 
-import cv2.cv2 as cv2
+import cv2
 import numpy as np
 
 warnings.filterwarnings('ignore')
@@ -170,7 +170,7 @@ def indentify(des_image):
     se = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
     # gray = cv2.erode(gray, se)
     # gray = cv2.dilate(gray, se)
-    cv2.imshow('g‘', gray)
+    cv2.imshow('gray', gray)
     # cv2.waitKey(0)
     # print("start")
     num_component = num(gray.copy())
